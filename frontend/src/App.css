@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Press+Start+2P&display=swap');
+* {
+  cursor: default;
+}
+body {
+  background-image: url('./images/cloudy_background.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 75%;
+  margin-top: 120px;
+  padding-bottom: 10%;
+  text-align: center;
+  font-family: 'Press Start 2P', sans-serif;
+  color: yellow;
+  padding-bottom: 10%;
+}
+.nav {
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+}
+.li-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: black;
+}
+.li-item-container {
+  height: 100%;
+  width: 25%;
+}
+
+.li-item-container:hover {
+  background-color: yellow;
+  color: black;
+}
+.li-item-container:hover * {
+  color: black;
+}
+.un-list {
+  padding: 10px 0;
+  padding-inline-start: 0;
+  list-style: none;
+  margin: 0;
+}
+.link {
+  text-decoration: none;
+  color: yellow;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 150%;
+}
+
+.title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 40px;
+  padding: 20px;
+}
+
+.subtitle {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.subheading {
+  font-size: 20px;
+  padding: 10px;
+}
+.button {
+  font-family: 'Press Start 2P', cursive;
+  color: blue;
+  font-size: 20px;
+  background-color: black;
+  padding: 5px;
+  box-shadow: 0;
+  border: 3px yellow double;
+  cursor: pointer;
+  margin: 10px;
+}
+.button:hover {
+  cursor: context-menu;
+  color: black;
+  background-color: blue;
+}
+.selector {
+  font-family: 'Press Start 2P', sans-serif;
+  padding: 5px;
+  background-color: blue;
+  border: 4px yellow double;
+  color: yellow;
+}
+.quizContainer {
+  width: 60%;
+  margin: auto;
+}
+.quizCard {
+  padding: 10px;
+  border: 3px yellow double;
+  margin-bottom: 10px;
+}
+.question {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.answerListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.answerContainer {
+  text-align: left;
+  width: 70%;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 8px;
+}
+.answerContainer:hover {
+  color: #39ff14;
+}
+.timer {
+  background-color: red;
+  position: fixed;
+  top: 70px;
+  font-size: 30px;
+  left: 0;
+  right: 0;
+  padding: 5px;
+}
+@keyframes loading {
+  0%,
+  20% {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 10px 0 0 rgba(0, 0, 0, 0), 20px 0 0 rgba(0, 0, 0, 0);
+  }
+  40% {
+    color: yellow;
+    text-shadow: 20px 0 0 rgba(0, 0, 0, 0), 40px 0 0 rgba(0, 0, 0, 0);
+  }
+  60% {
+    text-shadow: 20px 0 0 yellow, 40px 0 0 rgba(0, 0, 0, 0);
+  }
+  80%,
+  100% {
+    text-shadow: 20px 0 0 yellow, 40px 0 0 yellow;
+  }
+}
+.loadingMessage {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  animation: loading 0.5s infinite;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: center;
+  align-content: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.formContainer * {
+  margin: 5px;
+}
+.input {
+  font-family: 'Press Start 2P', sans-serif;
+  border: 4px yellow double;
+  padding: 4px;
+  background-color: black;
+  color: yellow;
+}
+
+.top-score-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table {
+  display: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px yellow double;
+  border-collapse: collapse;
+  width: 60%;
+  font-size: 20px;
+}
+
+.tableHeader {
+  margin: 5px;
+  padding: 5px;
+  border-bottom: 3px yellow double;
+  line-height: 1.8;
+}
+
+.tableRow {
+  margin: 5px;
+  padding: 5px;
+  font-family: 'Press Start 2P', sans-serif;
+  line-height: 1.5;
+}
+
+.tableData {
+  margin: 5px;
+  padding: 5px;
+}
+
+.appJSMain {
+  display: flex;
+  flex-direction: column;
+}
+
+.holder {
+  flex: 1 0 auto;
+}
+
+.footer {
+  height: 5%;
+  padding: 10px;
+  position: fixed;
+  top: 95%;
+  left: 0;
+  right: 0;
+  background-color: #454851;
+  color: #d9dbbc;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+  align-content: space-between;
+}
+
+.footerText {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.footerInfo {
+  display: flex;
+  align-content: flex-end;
+}
+
+.footerLinks {
+  flex-shrink: 0;
+  align-items: space-between;
+  align-self: flex-end;
+}
+.footerLinks a:hover {
+  color: blue;
+}
+
+.footerLinks a {
+  color: #d9dbbc;
+  align-content: flex-end;
+  padding: 2px;
+}
+
+@media only screen and (max-width: 700px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100px;
+    background-color: black;
+  }
+  .un-list {
+    display: flex;
+  }
+  .li-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .link {
+    margin: 0 10px;
+  }
+  .li-item-container {
+    height: 50%;
+    width: 45%;
+  }
+  .li-list {
+    padding: 10px;
+  }
+  .btn-login {
+    font-size: 15px;
+  }
+
+  body {
+    padding-top: 140px;
+  }
+  .link {
+    margin: auto;
+    text-decoration: none;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 120%;
+    color: yellow;
+    font-family: 'Press Start 2P', cursive;
+  }
+  .timer {
+    top: 100px;
+  }
+
+  .subtitle {
+    width: 85%;
+    font-size: 100%;
+  }
+
+  .table-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .top-score-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+  }
+  .table {
+    display: flex;
+    flex-direction: column;
+    /* display: wrap; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    border: 3px yellow double;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
+    align-content: flex-start;
+  }
+
+  .table * {
+    align-content: center;
+    justify-content: space-between;
+    display: flex;
+    font-family: 'Press Start 2P', sans-serif;
+    line-height: 1.5;
+    width: 100%;
+    font-size: 90%;
+  }
+  .tableRow {
+    align-content: center;
+    justify-content: space-between;
+    display: flex;
+  }
+  .tableRow:first-of-type {
+    border-bottom: 3px yellow double;
+    border-collapse: collapse;
+    width: 99%;
+  }
+
+  .tableHeader {
+    border: none;
+    line-height: 1.8;
+    width: auto;
+    font-size: 76%;
+  }
+
+  .tableData {
+    align-self: flex-start;
+    width: 33%;
+    margin: 5px;
+    font-size: 90%;
+  }
+
+  .tableCat {
+    display: none;
+  }
+
+  .tableDiff {
+    display: none;
+  }
+
+  .selector {
+    width: 85%;
+  }
+  .footer {
+    height: 8%;
+    font-size: smaller;
+  }
+}
